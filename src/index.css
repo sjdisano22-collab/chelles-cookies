@@ -935,8 +935,13 @@ a {
 }
 
 @media (max-width: 768px) {
+  .nav-logo {
+    margin-left: 0;
+  }
+
   .nav-links {
     display: none;
+    margin-right: 0;
   }
 
   .hamburger {
@@ -953,6 +958,7 @@ a {
     background: var(--white);
     padding: var(--spacing-lg);
     box-shadow: var(--shadow-lg);
+    margin-right: 0;
   }
 
   .hero-title {
