@@ -6,6 +6,7 @@ const ContactForm = () => {
     email: '',
     eventType: '',
     eventDate: '',
+    cookieQuantity: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -68,6 +69,7 @@ const ContactForm = () => {
           email: formData.email,
           event_type: formData.eventType || 'Not specified',
           event_date: formData.eventDate || 'Not specified',
+          cookie_quantity: formData.cookieQuantity || 'Not specified',
           message: formData.message,
           subject: `New Cookie Order Inquiry from ${formData.name}`,
         }),
@@ -87,6 +89,7 @@ const ContactForm = () => {
           email: '',
           eventType: '',
           eventDate: '',
+          cookieQuantity: '',
           message: ''
         });
       } else {
@@ -165,6 +168,22 @@ const ContactForm = () => {
           className="form-input"
           value={formData.eventDate}
           onChange={handleChange}
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="cookieQuantity" className="form-label">
+          Number of Cookies
+        </label>
+        <input
+          type="number"
+          id="cookieQuantity"
+          name="cookieQuantity"
+          className="form-input"
+          value={formData.cookieQuantity}
+          onChange={handleChange}
+          min="1"
+          placeholder="e.g., 24"
         />
       </div>
 
