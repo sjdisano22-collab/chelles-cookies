@@ -256,6 +256,34 @@ a {
   padding-top: 80px;
 }
 
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    url('/gallery/cookie-1.jpg'),
+    url('/gallery/cookie-3.jpg'),
+    url('/gallery/cookie-5.jpg'),
+    url('/gallery/cookie-7.jpg');
+  background-size:
+    400px 400px,
+    350px 350px,
+    300px 300px,
+    380px 380px;
+  background-position:
+    -100px -100px,
+    calc(100% + 80px) -120px,
+    -150px calc(100% + 100px),
+    calc(100% + 100px) calc(100% + 80px);
+  background-repeat: no-repeat;
+  opacity: 0.08;
+  z-index: 1;
+  pointer-events: none;
+}
+
 .hero-content {
   position: relative;
   z-index: 2;

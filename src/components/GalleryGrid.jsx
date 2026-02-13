@@ -14,9 +14,6 @@ const GalleryGrid = ({ onImageClick }) => {
             alt={image.alt}
             className="gallery-image"
           />
-          <div className="gallery-info">
-            <h3 className="gallery-title">{image.title}</h3>
-          </div>
         </div>
       ))}
     </div>
