@@ -16,7 +16,7 @@ const AboutSection = () => {
             </p>
             <p>
               What started as a hobby has blossomed into a business built on quality,
-              creativity, and customer satisfaction. Every cookie tells a story, and I'd
+              creativity, and genuine care. Every cookie tells a story, and I'd
               be honored to be part of yours.
             </p>
           </div>
