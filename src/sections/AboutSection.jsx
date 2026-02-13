@@ -19,14 +19,6 @@ const AboutSection = () => {
               creativity, and customer satisfaction. Every cookie tells a story, and I'd
               be honored to be part of yours.
             </p>
-
-            <div className="about-highlight">
-              <p>
-                <strong>My Promise:</strong> Fresh ingredients, attention to detail, and cookies
-                that taste as good as they look. Each order is made with love and delivered
-                with care.
-              </p>
-            </div>
           </div>
         </div>
       </div>

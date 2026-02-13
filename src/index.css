@@ -265,21 +265,51 @@ a {
   bottom: 0;
   background-image:
     url('/gallery/cookie-1.jpg'),
+    url('/gallery/cookie-2.jpg'),
     url('/gallery/cookie-3.jpg'),
+    url('/gallery/cookie-4.jpg'),
     url('/gallery/cookie-5.jpg'),
-    url('/gallery/cookie-7.jpg');
+    url('/gallery/cookie-6.jpg'),
+    url('/gallery/cookie-7.jpg'),
+    url('/gallery/cookie-8.jpg'),
+    url('/gallery/cookie-9.jpg'),
+    url('/gallery/cookie-10.jpg'),
+    url('/gallery/cookie-11.jpg'),
+    url('/gallery/cookie-12.jpg'),
+    url('/gallery/cookie-13.jpg'),
+    url('/gallery/cookie-14.jpg');
   background-size:
-    400px 400px,
+    380px 380px,
+    340px 340px,
+    360px 360px,
+    320px 320px,
     350px 350px,
-    300px 300px,
-    380px 380px;
+    330px 330px,
+    370px 370px,
+    340px 340px,
+    330px 330px,
+    360px 360px,
+    320px 320px,
+    350px 350px,
+    340px 340px,
+    330px 330px;
   background-position:
-    -100px -100px,
-    calc(100% + 80px) -120px,
-    -150px calc(100% + 100px),
-    calc(100% + 100px) calc(100% + 80px);
+    -120px -80px,
+    20% 15%,
+    calc(100% + 100px) -60px,
+    15% calc(100% + 60px),
+    55% 8%,
+    85% 25%,
+    calc(100% + 90px) calc(100% + 50px),
+    -70px calc(100% - 80px),
+    calc(100% - 180px) calc(100% + 40px),
+    45% calc(100% - 100px),
+    75% 40%,
+    30% 55%,
+    calc(100% - 120px) 60%,
+    10% 75%;
   background-repeat: no-repeat;
-  opacity: 0.08;
+  opacity: 0.12;
   z-index: 1;
   pointer-events: none;
 }
@@ -289,6 +319,10 @@ a {
   z-index: 2;
   max-width: 800px;
   padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(168, 216, 234, 0.15);
 }
 
 .hero-title {
@@ -296,11 +330,13 @@ a {
   color: var(--baby-blue);
   margin-bottom: var(--spacing-md);
   letter-spacing: -1px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8);
 }
 
 .hero-tagline {
   font-size: var(--text-xl);
   color: var(--text-medium);
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
   margin-bottom: var(--spacing-xl);
   font-weight: 300;
   font-style: italic;
