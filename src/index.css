@@ -14,6 +14,7 @@
   --baby-blue: #A8D8EA;
   --baby-blue-light: #C8E6F5;
   --baby-blue-dark: #7AB8D1;
+  --baby-blue-bold: #5AA9D1;
 
   /* Neutrals */
   --white: #FFFFFF;
@@ -175,7 +176,7 @@ a {
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: var(--spacing-sm) var(--spacing-lg);
+  padding: 0.5rem var(--spacing-lg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -187,26 +188,23 @@ a {
 }
 
 .nav-logo-monogram {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background: var(--baby-blue);
-  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: var(--font-heading);
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-weight: 700;
   line-height: 1;
-  padding-bottom: 3px;
-  box-shadow: var(--shadow-sm);
+  color: var(--white);
+  -webkit-text-stroke: 1px var(--baby-blue);
+  text-stroke: 1px var(--baby-blue);
   transition: all 0.3s ease;
 }
 
 .nav-logo-monogram:hover {
-  box-shadow: var(--shadow-md);
   transform: scale(1.1);
+  -webkit-text-stroke: 1.5px var(--baby-blue);
+  text-stroke: 1.5px var(--baby-blue);
 }
 
 .nav-logo-text {
