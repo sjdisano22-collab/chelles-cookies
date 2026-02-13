@@ -54,7 +54,7 @@ const Navigation = () => {
           className="nav-logo"
           onClick={() => scrollToSection('home')}
         >
-          Chelle's Cookies
+          <span className="nav-logo-monogram">C</span>
         </div>
 
         <ul className={`nav-links ${mobileOpen ? 'mobile-open' : ''}`}>

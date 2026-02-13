@@ -182,17 +182,61 @@ a {
 }
 
 .nav-logo {
+  cursor: pointer;
+  margin-left: -5rem;
+}
+
+.nav-logo-monogram {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--baby-blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-heading);
-  font-size: var(--text-2xl);
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  padding-bottom: 3px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.nav-logo-monogram:hover {
+  box-shadow: var(--shadow-md);
+  transform: scale(1.1);
+}
+
+.nav-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.nav-logo-name {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
   color: var(--baby-blue);
   font-weight: 600;
-  cursor: pointer;
+  font-style: italic;
+}
+
+.nav-logo-tagline {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--text-medium);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .nav-links {
   display: flex;
   gap: var(--spacing-lg);
   list-style: none;
+  margin-right: -5rem;
 }
 
 .nav-link {
