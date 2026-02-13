@@ -55,25 +55,43 @@ const ContactForm = () => {
       return;
     }
 
-    // Simulate form submission (replace with actual email service integration)
+    // Submit to Web3Forms
     try {
-      // TODO: Integrate with EmailJS or Formspree here
-      // For now, just simulate a delay
-      await new Promise((resolve) => setTimeout(resolve, 1500));
-
-      setSubmitMessage({
-        type: 'success',
-        text: 'Thank you for your inquiry! We\'ll get back to you soon.'
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: 'efaa9b9d-6011-4425-8162-9957257d16e6',
+          name: formData.name,
+          email: formData.email,
+          event_type: formData.eventType || 'Not specified',
+          event_date: formData.eventDate || 'Not specified',
+          message: formData.message,
+          subject: `New Cookie Order Inquiry from ${formData.name}`,
+        }),
       });
 
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        eventType: '',
-        eventDate: '',
-        message: ''
-      });
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitMessage({
+          type: 'success',
+          text: 'Thank you for your inquiry! We\'ll get back to you soon.'
+        });
+
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          eventType: '',
+          eventDate: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
     } catch (error) {
       setSubmitMessage({
         type: 'error',
