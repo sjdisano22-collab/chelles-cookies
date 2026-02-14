@@ -15,6 +15,10 @@ const Hero = () => {
       <div className="hero-decoration"></div>
       <div className="hero-decoration"></div>
 
+      <div className="hero-quote-bubble">
+        "The most DELICIOUS royal icing cookies that I've ever had!"
+      </div>
+
       <div className="hero-content">
         <h1 className="hero-title">Chelle's Cookies</h1>
         <p className="hero-tagline">

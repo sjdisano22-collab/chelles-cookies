@@ -207,6 +207,25 @@ a {
   text-stroke: 1.5px var(--baby-blue);
 }
 
+.nav-logo-sleek {
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.nav-logo:hover .nav-logo-sleek {
+  transform: scale(1.08);
+}
+
+.nav-logo:hover .nav-logo-sleek circle[stroke] {
+  stroke: var(--baby-blue-dark);
+  stroke-width: 2.5;
+}
+
+.nav-logo:hover .nav-logo-sleek text {
+  fill: var(--baby-blue-dark);
+}
+
 .nav-logo-text {
   display: flex;
   flex-direction: column;
@@ -379,9 +398,40 @@ a {
   font-size: var(--text-xl);
   color: var(--text-medium);
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
   font-weight: 300;
   font-style: italic;
+}
+
+.hero-quote-bubble {
+  position: absolute;
+  left: 3%;
+  top: 20%;
+  max-width: 280px;
+  padding: 1.25rem 1.5rem;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  font-size: var(--text-md);
+  color: var(--text-dark);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.6;
+  z-index: 10;
+}
+
+.hero-quote-bubble::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgba(255, 255, 255, 0.65) transparent transparent;
 }
 
 .hero-cta {
@@ -965,6 +1015,14 @@ a {
 
   .hero-tagline {
     font-size: var(--text-lg);
+  }
+
+  .hero-quote-bubble {
+    position: static;
+    transform: none;
+    margin: var(--spacing-lg) auto;
+    max-width: 90%;
+    font-size: var(--text-sm);
   }
 
   .gallery-grid,
